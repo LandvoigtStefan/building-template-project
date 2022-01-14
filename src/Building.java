@@ -38,6 +38,6 @@ public class Building {
     }
 
     public int getNumberOfResident(){
-        return -1;
+        return 1;
     }
 }
