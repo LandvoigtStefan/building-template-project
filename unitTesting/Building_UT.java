@@ -32,4 +32,15 @@ public class Building_UT {
         expected.add("Toni");
         Assertions.assertEquals(expected, oneBuilding.getResident());
     }
+
+    @Test
+    public void createOneBuildingWithOneResidentAndAddMany(){
+        String[] residents = {"Franz", "Sisi", "Carl"};
+        Building oneBuilding = new Building(1, "Horst");
+        oneBuilding.addResident(residents);
+        LinkedList<String> expected = new LinkedList<>();
+        expected.add("Horst");
+        expected.addAll(List.of(residents));
+        Assertions.assertEquals(expected, oneBuilding.getResident());
+    }
 }
