@@ -6,38 +6,39 @@ public class Building {
     private int numberOfResident = 0;
     private LinkedList<String> residents = new LinkedList<>();
 
-    private Building(){}
+    private Building() {
+    }
 
-    public Building(int id, String resident){
+    public Building(int id, String resident) {
         this.id = id;
         addResident(resident);
     }
 
-    public Building(int id, String[] residents){
+    public Building(int id, String[] residents) {
         this.id = id;
         addResident(residents);
     }
 
-    public void addResident(String resident){
-        if(!this.residents.contains(resident))
+    public void addResident(String resident) {
+        if (!this.residents.contains(resident))
             this.residents.add(resident);
     }
 
-    public void addResident(String[] residents){
-        for(String resident : residents){
+    public void addResident(String[] residents) {
+        for (String resident : residents) {
             addResident(resident);
         }
     }
 
-    public LinkedList<String> getResident(){
+    public LinkedList<String> getResident() {
         return residents;
     }
 
-    public void removeResident(String resident){
+    public void removeResident(String resident) {
         this.residents.remove(resident);
     }
 
-    public int getNumberOfResident(){
+    public int getNumberOfResident() {
         return residents.size();
     }
 }
