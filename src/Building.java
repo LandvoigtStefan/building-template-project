@@ -23,7 +23,9 @@ public class Building {
     }
 
     public void addResident(String[] residents){
-        this.residents.addAll(List.of(residents));
+        for(String resident : residents){
+            addResident(resident);
+        }
     }
 
     public LinkedList<String> getResident(){

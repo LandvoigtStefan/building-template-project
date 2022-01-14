@@ -54,7 +54,7 @@ public class Building_UT {
     }
 
     @Test
-    public void createOneBuildingWithManyResidentsAndAddManySame(){
+    public void createOneBuildingWithManyResidentsAndAddAllSame(){
         String[] residents = {"Horst", "Franz", "Sisi", "Carl"};
         Building oneBuilding = new Building(1, residents);
         oneBuilding.addResident(residents);
