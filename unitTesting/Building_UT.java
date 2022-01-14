@@ -81,11 +81,19 @@ public class Building_UT {
         Assertions.assertEquals(expected, oneBuilding.getResident());
     }
 
-    @Test void createOneBuildingWithOneResidentAndRemoveANonExistingResident(){
+    @Test
+    public void createOneBuildingWithOneResidentAndRemoveANonExistingResident(){
         Building oneBuilding = new Building(1, "Horst");
         oneBuilding.removeResident("Susi");
         LinkedList<String> expected = new LinkedList<>();
         expected.add("Horst");
         Assertions.assertEquals(expected, oneBuilding.getResident());
+    }
+
+    @Test
+    public void createOneBuildingWithOneResidentAndGetNumberOfResident(){
+        Building oneBuilding = new Building(1, "Horst");
+        int expectedResidents = 1;
+        Assertions.assertEquals(expectedResidents, oneBuilding.getNumberOfResident());
     }
 }

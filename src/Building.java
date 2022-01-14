@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Building {
     private int id;
+    private int numberOfResident = 0;
     private LinkedList<String> residents = new LinkedList<>();
 
     private Building(){}
@@ -34,5 +35,9 @@ public class Building {
 
     public void removeResident(String resident){
         this.residents.remove(resident);
+    }
+
+    public int getNumberOfResident(){
+        return -1;
     }
 }
