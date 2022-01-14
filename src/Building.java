@@ -9,20 +9,20 @@ public class Building {
 
     public Building(int id, String resident){
         this.id = id;
-        addResident(resident);
-    }
-
-    public Building(int id, String[] resident){
-        this.id = id;
-        addResident(resident);
-    }
-
-    public void addResident(String resident){
         this.residents.add(resident);
     }
 
-    public void addResident(String[] residents){
+    public Building(int id, String[] residents){
+        this.id = id;
         this.residents.addAll(List.of(residents));
+    }
+
+    public void addResident(String resident){
+
+    }
+
+    public void addResident(String[] residents){
+
     }
 
     public LinkedList<String> getResident(){
