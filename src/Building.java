@@ -31,4 +31,8 @@ public class Building {
     public LinkedList<String> getResident(){
         return residents;
     }
+
+    public void removeResident(String resident){
+
+    }
 }
