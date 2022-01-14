@@ -43,4 +43,13 @@ public class Building_UT {
         expected.addAll(List.of(residents));
         Assertions.assertEquals(expected, oneBuilding.getResident());
     }
+
+    @Test
+    public void createOneBuildingWithOneResidentAndAddTheSame(){
+        Building oneBuilding = new Building(1, "Horst");
+        oneBuilding.addResident("Horst");
+        LinkedList<String> expected = new LinkedList<>();
+        expected.add("Horst");
+        Assertions.assertEquals(expected, oneBuilding.getResident());
+    }
 }
