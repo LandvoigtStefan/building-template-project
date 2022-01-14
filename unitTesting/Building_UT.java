@@ -52,4 +52,14 @@ public class Building_UT {
         expected.add("Horst");
         Assertions.assertEquals(expected, oneBuilding.getResident());
     }
+
+    @Test
+    public void createOneBuildingWithManyResidentsAndAddManySame(){
+        String[] residents = {"Horst", "Franz", "Sisi", "Carl"};
+        Building oneBuilding = new Building(1, residents);
+        oneBuilding.addResident(residents);
+        LinkedList<String> expected = new LinkedList<>();
+        expected.addAll(List.of(residents));
+        Assertions.assertEquals(expected, oneBuilding.getResident());
+    }
 }
