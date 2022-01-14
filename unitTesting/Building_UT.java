@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Building_UT {
 
@@ -10,6 +11,15 @@ public class Building_UT {
         Building oneBuilding = new Building(1, "Horst");
         LinkedList<String> expected = new LinkedList<>();
         expected.add("Horst");
+        Assertions.assertEquals(expected, oneBuilding.getResident());
+    }
+
+    @Test
+    public void createOneBuildingWithManyResidents(){
+        String[] residents = {"Horst", "Franz", "Sisi", "Carl"};
+        Building oneBuilding = new Building(1, residents);
+        LinkedList<String> expected = new LinkedList<>();
+        expected.addAll(List.of(residents));
         Assertions.assertEquals(expected, oneBuilding.getResident());
     }
 }
