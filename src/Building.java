@@ -13,7 +13,8 @@ public class Building {
     }
 
     public Building(int id, String[] resident){
-
+        this.id = id;
+        addResident(resident);
     }
 
     public void addResident(String resident){
@@ -21,6 +22,7 @@ public class Building {
     }
 
     public void addResident(String[] residents){
+        this.residents.addAll(List.of(residents));
     }
 
     public LinkedList<String> getResident(){
