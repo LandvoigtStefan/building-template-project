@@ -33,6 +33,6 @@ public class Building {
     }
 
     public void removeResident(String resident){
-
+        this.residents.remove(resident);
     }
 }
