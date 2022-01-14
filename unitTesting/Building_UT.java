@@ -96,4 +96,11 @@ public class Building_UT {
         int expectedResidents = 1;
         Assertions.assertEquals(expectedResidents, oneBuilding.getNumberOfResident());
     }
+
+    @Test
+    public void createOneBuildingWithManyResidentAndGetNumberOfResident(){
+        Building oneBuilding = new Building(1, new String[]{"Horst", "Franz", "Sisi", "Carl"});
+        int expectedResidents = 4;
+        Assertions.assertEquals(expectedResidents, oneBuilding.getNumberOfResident());
+    }
 }
