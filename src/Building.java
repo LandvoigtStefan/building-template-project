@@ -9,7 +9,7 @@ public class Building {
 
     public Building(int id, String resident){
         this.id = id;
-        this.residents.add(resident);
+        addResident(resident);
     }
 
     public Building(int id, String[] residents){
@@ -18,7 +18,7 @@ public class Building {
     }
 
     public void addResident(String resident){
-
+        this.residents.add(resident);
     }
 
     public void addResident(String[] residents){
