@@ -66,7 +66,7 @@ public class Building_UT {
     @Test
     public void createOneBuildingWithManyResidentsAndAddSomeSame(){
         String[] residents = {"Horst", "Franz", "Sisi", "Carl"};
-        Building oneBuilding = new Building(1, new String[]{"Franz", "Sisi"});
+        Building oneBuilding = new Building(1, new String[]{"Horst", "Franz"});
         oneBuilding.addResident(residents);
         LinkedList<String> expected = new LinkedList<>();
         expected.addAll(List.of(residents));
