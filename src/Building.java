@@ -18,7 +18,8 @@ public class Building {
     }
 
     public void addResident(String resident){
-        this.residents.add(resident);
+        if(!this.residents.contains(resident))
+            this.residents.add(resident);
     }
 
     public void addResident(String[] residents){
