@@ -85,6 +85,7 @@ public class Building_UT {
         Building oneBuilding = new Building(1, "Horst");
         oneBuilding.removeResident("Susi");
         LinkedList<String> expected = new LinkedList<>();
+        expected.add("Horst");
         Assertions.assertEquals(expected, oneBuilding.getResident());
     }
 }

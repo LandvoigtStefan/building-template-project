@@ -33,8 +33,6 @@ public class Building {
     }
 
     public void removeResident(String resident){
-        if(!this.residents.contains(resident))
-            assert false;
         this.residents.remove(resident);
     }
 }
